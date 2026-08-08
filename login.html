@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriDirect - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002204",
+                    "tertiary": "#775447",
+                    "background": "#f6fbf0",
+                    "surface-container-low": "#f0f5ea",
+                    "primary-container": "#268630",
+                    "surface-container-high": "#e5eadf",
+                    "primary": "#006b1b",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#edf3e7",
+                    "on-secondary-fixed-variant": "#604100",
+                    "inverse-primary": "#7ddc7a",
+                    "primary-fixed": "#98f994",
+                    "surface": "#f6fbf0",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-tertiary-fixed-variant": "#603f33",
+                    "surface-container": "#eaf0e4",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f6fbf0",
+                    "outline": "#6f7a6b",
+                    "on-secondary-container": "#6a4800",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-dim": "#d6dcd1",
+                    "tertiary-container": "#926c5e",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#f7fff1",
+                    "on-background": "#181d16",
+                    "secondary-fixed": "#ffdeac",
+                    "on-surface": "#181d16",
+                    "inverse-surface": "#2c322a",
+                    "surface-container-highest": "#dfe4d9",
+                    "secondary-container": "#feb300",
+                    "surface-variant": "#dfe4d9",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#bfcab9",
+                    "on-tertiary-fixed": "#2e150b",
+                    "on-surface-variant": "#3f4a3d",
+                    "on-secondary-fixed": "#281900",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ebbcac",
+                    "secondary-fixed-dim": "#ffba38",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#7e5700",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#7ddc7a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            background: rgba(246, 251, 240, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased min-h-screen flex flex-col">
+<main class="flex-grow flex flex-col relative overflow-hidden">
+<!-- Hero Decorative Section -->
+<div class="relative h-[309px] w-full overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/20 to-surface z-10"></div>
+<img alt="Vibrant green agricultural field" class="w-full h-full object-cover" data-alt="expansive sun-drenched lush green rolling hills of a sustainable farm at sunrise with soft morning mist and warm golden light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG9zKmnxlKT1sBoOcVRpmkB2LNJbhCCQZFmIq22GWRaAVqtj2W0X0hTL1ynZeVTCY-gMyggsmrMQnG8rc5iXVSPza0spjxubZSyQKDYQ70FeJSoMuoRkKHm_SWDsLN8MXGJMgXSkP4reL-AtT2z2Kmxe6giD3-NHeCsuGoGUyMdD-vKqr45ClFDR28LEiO0heHHbmDmCt3pOYwkwe51tsNDXpO6atlB5PjJI7acDJkccIQtX2EHri0tbOH06wLlMbLUpLANMea5rw"/>
+<div class="absolute inset-0 z-20 flex flex-col justify-end p-8 pb-12">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="agriculture">agriculture</span>
+<h1 class="font-headline font-extrabold text-3xl tracking-tighter text-primary">AgriDirect</h1>
+</div>
+<p class="text-on-surface-variant font-medium max-w-[280px] leading-snug">
+                    Bridging the gap between the fertile soil and your market.
+                </p>
+</div>
+</div>
+<!-- Login Card Section -->
+<div class="flex-grow bg-surface rounded-t-[2.5rem] -mt-10 z-30 px-8 pt-10 pb-12 shadow-[0_-12px_40px_rgba(24,29,22,0.04)]">
+<div class="space-y-1 mb-8">
+<h2 class="font-headline font-bold text-2xl text-on-surface">Welcome back</h2>
+<p class="text-label-md text-on-surface-variant/70 tracking-wide uppercase font-semibold">Sign in to continue</p>
+</div>
+<!-- Form -->
+<form method="POST" class="space-y-6">
+<!-- Mobile/Email Field -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1">Email or Mobile Number</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="alternate_email">alternate_email</span>
+<input
+    type="email"
+    name="email"
+    class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container transition-all placeholder:text-outline-variant"
+    placeholder="farmer@agridirect.com"
+    required>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="block text-sm font-semibold text-on-surface-variant">Password</label>
+<button class="text-xs font-bold text-primary tracking-tight" type="button">Forgot?</button>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="lock">lock</span>
+<input
+    type="password"
+    name="password"
+    class="w-full bg-surface-container-low border-none rounded-xl py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container transition-all placeholder:text-outline-variant"
+    placeholder="••••••••"
+    required>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-outline cursor-pointer" data-icon="visibility">visibility</span>
+</div>
+</div>
+<!-- Login Button -->
+<button class="w-full bg-primary text-on-primary font-headline font-bold py-4 rounded-xl shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform duration-150 mt-4" type="submit">
+                    Sign In
+                </button>
+</form>
+<!-- Divider -->
+<div class="relative my-10 flex items-center">
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+<span class="px-4 text-xs font-bold text-outline uppercase tracking-[0.2em]">Social login</span>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+</div>
+<!-- Social Options -->
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-3 bg-surface-container-high py-4 rounded-xl font-semibold text-on-surface hover:bg-surface-container-highest transition-colors active:scale-95 duration-150">
+<img alt="Google" class="w-5 h-5" color\"_logo.svg"="" data-alt="Official Google G color logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR6Y_ljaibWHBemXROYbw4VpGRubFOEWDCDUmHJVxPgkjLjlzsw3IuyZiz5qhJyah2LcX0cVOE6hBR5jNZnEJiAOPGrqcQFRDywIa5m9N0r4XGql9yoATFSrXJpiRxZAbHJm_WcSsYFDvdE4n5ME4xvyWsZh43K2Gm3eKmWAWKcbugAaFu9Waz4AmWe96UT-_yHymMmc5wWaeg5b7aqx6oA4cWZNNf-fIC3buqK1ckUeyFdyPSXTWFJ9njr7Lt_DGBgxtoDPtupW4"/>
+<span>Google</span>
+</button>
+<button class="flex items-center justify-center gap-3 bg-surface-container-high py-4 rounded-xl font-semibold text-on-surface hover:bg-surface-container-highest transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#1877F2]" data-icon="facebook" style="font-variation-settings: 'FILL' 1;">social_leaderboard</span>
+<span>Facebook</span>
+</button>
+</div>
+<!-- Footer Link -->
+<p class="text-center mt-12 text-on-surface-variant font-medium">
+    Don't have an account?
+    <a href="/register" class="text-secondary font-bold ml-1">
+        Create Account
+    </a>
+</p>
+</div>
+</main>
+<!-- Bottom Navigation Suppression Logic: This is a focused login screen, so global nav is omitted for UX focus -->
+<!-- Back to top floating indicator (Subtle) -->
+<div class="fixed top-8 left-8 z-50">
+<button class="w-10 h-10 flex items-center justify-center bg-white/40 backdrop-blur-md rounded-full text-on-surface-variant active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+</body></html>

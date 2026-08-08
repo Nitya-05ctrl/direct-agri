@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriDirect Commodities</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#002204",
+                        "tertiary": "#775447",
+                        "background": "#f6fbf0",
+                        "surface-container-low": "#f0f5ea",
+                        "primary-container": "#268630",
+                        "surface-container-high": "#e5eadf",
+                        "primary": "#006b1b",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#edf3e7",
+                        "on-secondary-fixed-variant": "#604100",
+                        "inverse-primary": "#7ddc7a",
+                        "primary-fixed": "#98f994",
+                        "surface": "#f6fbf0",
+                        "on-primary-fixed-variant": "#005313",
+                        "on-tertiary-fixed-variant": "#603f33",
+                        "surface-container": "#eaf0e4",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f6fbf0",
+                        "outline": "#6f7a6b",
+                        "on-secondary-container": "#6a4800",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#006e1c",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-dim": "#d6dcd1",
+                        "tertiary-container": "#926c5e",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#f7fff1",
+                        "on-background": "#181d16",
+                        "secondary-fixed": "#ffdeac",
+                        "on-surface": "#181d16",
+                        "inverse-surface": "#2c322a",
+                        "surface-container-highest": "#dfe4d9",
+                        "secondary-container": "#feb300",
+                        "surface-variant": "#dfe4d9",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bfcab9",
+                        "on-tertiary-fixed": "#2e150b",
+                        "on-surface-variant": "#3f4a3d",
+                        "on-secondary-fixed": "#281900",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ebbcac",
+                        "secondary-fixed-dim": "#ffba38",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#7e5700",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed-dim": "#7ddc7a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fbf0;
+            color: #181d16;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-nav {
+            background: rgba(246, 251, 240, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="docked w-full top-0 sticky z-50 bg-[#f6fbf0] dark:bg-stone-950 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006b1b] dark:text-[#43A047]" data-icon="agriculture">agriculture</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold text-xl tracking-tighter text-[#006b1b] dark:text-[#43A047]">AgriDirect</h1>
+</div>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-150 text-[#006b1b] dark:text-[#43A047]">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</header>
+<main class="px-6 pt-4">
+<!-- Hero Section: Editorial Layering -->
+<section class="relative mb-8">
+<div class="rounded-xl overflow-hidden h-48 w-full relative">
+<img alt="Harvest Field" class="w-full h-full object-cover" data-alt="Cinematic wide shot of a golden wheat field at sunrise with soft morning mist and warm sunlight filtering through the stalks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpEXaFlUe2JFOwkif0ucxt0HhknSvtQZH6hoG8_Ud_rKO87H5lm6E7Ge_fx0GkuU3IJOHZeZ0wGfPPDQ_zCalfhcVL6GlrkyqXqk8newLYpbCnVDa2i2SZXB7E0LtF6QoB8bCH9tRexTRE7nOH_NtI44bawdyDDekmEFJv88tQOyMHPA9NQL0bs36QhCY6VijqhcV8n5Vaz3zkvW2J1zZo-M6SXR8yEH_6YjBTc2_TztiC5tv7GrzEAA6yGGrWZfTUPhyq_SJ5phE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="text-[10px] font-bold tracking-[0.2em] uppercase text-on-primary-container opacity-90 mb-1 block">Live Marketplace</span>
+<h2 class="text-2xl font-extrabold text-on-primary-container leading-tight">Fresh Harvest <br/>Direct Access</h2>
+</div>
+</div>
+</section>
+<!-- Filter Chips: Harvest Badges Style -->
+<div class="flex gap-3 overflow-x-auto pb-4 no-scrollbar">
+<button class="flex-none px-6 py-2.5 rounded-full bg-primary text-on-primary text-sm font-semibold">All Crops</button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-highest text-on-surface text-sm font-medium hover:bg-surface-container-high transition-colors">Grains</button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-highest text-on-surface text-sm font-medium hover:bg-surface-container-high transition-colors">Vegetables</button>
+<button class="flex-none px-6 py-2.5 rounded-full bg-surface-container-highest text-on-surface text-sm font-medium hover:bg-surface-container-high transition-colors">Fruits</button>
+</div>
+<!-- Featured Commodity: Asymmetric Bento Style -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Large Featured Card -->
+<div class="col-span-2 bg-surface-container-lowest rounded-xl p-5 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-[10px] font-bold tracking-widest uppercase text-secondary mb-1 block">Premium Quality</span>
+<h3 class="text-xl font-bold">Basmati Paddy</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-xs" data-icon="location_on">location_on</span> Punjab Region
+                        </p>
+</div>
+<div class="bg-primary-container/10 px-3 py-1 rounded-lg">
+<span class="text-primary font-bold text-lg">₹4,200</span>
+<span class="text-[10px] text-primary/70 font-medium block">per quintal</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-6">
+<div class="flex flex-col">
+<span class="text-[10px] uppercase font-bold text-outline">Availability</span>
+<span class="text-sm font-semibold text-primary flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary"></span> 1,200 Tons left
+                        </span>
+</div>
+<button class="bg-primary text-on-primary px-5 py-2.5 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+                        Book Allotment
+                    </button>
+</div>
+</div>
+<!-- Smaller Grid Items -->
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-secondary" data-icon="potted_plant">potted_plant</span>
+</div>
+<h3 class="font-bold text-sm">Organic Cotton</h3>
+<p class="text-xs text-secondary font-bold mt-1">₹6,800/q</p>
+</div>
+<div class="mt-4">
+<div class="h-1 w-full bg-outline-variant/30 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4"></div>
+</div>
+<span class="text-[10px] font-medium text-on-surface-variant mt-1 block">75% Reserved</span>
+</div>
+</div>
+<div class="bg-surface-container rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-primary" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+</div>
+<h3 class="font-bold text-sm">Yellow Maize</h3>
+<p class="text-xs text-primary font-bold mt-1">₹2,100/q</p>
+</div>
+<div class="mt-4">
+<button class="w-full py-2 border border-primary/20 rounded-lg text-[10px] font-bold uppercase tracking-wider text-primary">Book Now</button>
+</div>
+</div>
+</div>
+<!-- Listing Section: Organic Layering -->
+<h4 class="text-sm font-extrabold tracking-tight mb-4 uppercase text-on-surface-variant/70">Recently Added Listings</h4>
+<div class="space-y-4">
+<!-- Listing Item 1 -->
+<div class="group bg-surface-container-low rounded-xl p-1 flex items-center gap-4 hover:bg-surface-container-high transition-colors">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Onion Harvest" class="w-full h-full object-cover" data-alt="Close-up of freshly harvested red onions with earth still clinging to them, in an organic jute basket under soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCttUiOAkDZZ-sogTByrAvy3IrN9uI6rzgRElpK0CITTCTxQK_ZJefDgU8UXK0ZTjwLRdS4LrzWc8LikHnOHxBukim6x27l-WNrPBdLaqAcZY6U6sT5s5YFDn7XY942TLLBRTxT2lhERwCI1v88X5yXP0ugJq_4-rK_7won8X5K8EyuvdmyPyd02pWVfCWDeLq5S4s2GSvUe_AQoH9vecIWhakWnQWZKLmMfeEMmU8RdImQv0WbtKb6QslJrWxa72QTnbWqsSlmnLI"/>
+</div>
+<div class="flex-grow pr-4">
+<div class="flex justify-between items-start">
+<h5 class="font-bold text-sm">Red Onion (Nasik)</h5>
+<span class="text-[10px] font-bold text-error bg-error-container px-1.5 py-0.5 rounded">Critical Stock</span>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Nasik, Maharashtra</p>
+<div class="flex justify-between items-end mt-2">
+<span class="text-sm font-extrabold">₹1,850 <span class="text-[10px] font-normal text-outline">/q</span></span>
+<button class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center gap-1">
+                            Details <span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Listing Item 2 -->
+<div class="group bg-surface-container-low rounded-xl p-1 flex items-center gap-4 hover:bg-surface-container-high transition-colors">
+<div class="w-20 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Green Chillies" class="w-full h-full object-cover" data-alt="A pile of vibrant green bird's eye chillies on a rustic wooden table with high contrast lighting and sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKZAlvSRdxxBkX9JrwnoWz47kILjlpIBlnXQDR1jtADh5GQ_RV_QlsNg6XUwjtmLLg1mzkwdsxQp4F4HnpDyviBl5owWQZR8DVhvVNBg20ZPIvm2jt9oAeKt9YuEAQ_F32pxrvG-_WzMmp0B_X_i9y3QQLohDTjgr-kNwxmBs4IiKMYs59lFL1GPZYTt_OT0cp4HrS5YFi4hmtx6ayUvtFBsRPH1LwFxHi9adxLqErqOXsv1_nE43NYMsJ4T4wErBEQeT0RN9r5VA"/>
+</div>
+<div class="flex-grow pr-4">
+<div class="flex justify-between items-start">
+<h5 class="font-bold text-sm">Green Chilli (G4)</h5>
+<span class="text-[10px] font-bold text-primary bg-primary-container/20 px-1.5 py-0.5 rounded">High Demand</span>
+</div>
+<p class="text-[10px] text-on-surface-variant mt-0.5">Guntur, Andhra Pradesh</p>
+<div class="flex justify-between items-end mt-2">
+<span class="text-sm font-extrabold">₹4,500 <span class="text-[10px] font-normal text-outline">/q</span></span>
+<button class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center gap-1">
+                            Details <span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6fbf0]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(24,29,22,0.06)] rounded-t-[2rem] border-t border-[#bfcab9]/20">
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#eaf0e4] dark:bg-[#006b1b]/20 text-[#006b1b] dark:text-[#43A047] rounded-2xl px-5 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant" style="font-variation-settings: 'FILL' 1;">potted_plant</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Ads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

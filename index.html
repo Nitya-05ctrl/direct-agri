@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002204",
+                    "tertiary": "#775447",
+                    "background": "#f6fbf0",
+                    "surface-container-low": "#f0f5ea",
+                    "primary-container": "#268630",
+                    "surface-container-high": "#e5eadf",
+                    "primary": "#006b1b",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#edf3e7",
+                    "on-secondary-fixed-variant": "#604100",
+                    "inverse-primary": "#7ddc7a",
+                    "primary-fixed": "#98f994",
+                    "surface": "#f6fbf0",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-tertiary-fixed-variant": "#603f33",
+                    "surface-container": "#eaf0e4",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f6fbf0",
+                    "outline": "#6f7a6b",
+                    "on-secondary-container": "#6a4800",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-dim": "#d6dcd1",
+                    "tertiary-container": "#926c5e",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#f7fff1",
+                    "on-background": "#181d16",
+                    "secondary-fixed": "#ffdeac",
+                    "on-surface": "#181d16",
+                    "inverse-surface": "#2c322a",
+                    "surface-container-highest": "#dfe4d9",
+                    "secondary-container": "#feb300",
+                    "surface-variant": "#dfe4d9",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#bfcab9",
+                    "on-tertiary-fixed": "#2e150b",
+                    "on-surface-variant": "#3f4a3d",
+                    "on-secondary-fixed": "#281900",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ebbcac",
+                    "secondary-fixed-dim": "#ffba38",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#7e5700",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#7ddc7a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-300 flex justify-center items-center min-h-screen">
+<div class="w-[375px] min-h-screen bg-surface rounded-[30px] shadow-2xl overflow-hidden relative">
+
+  
+    
+<!-- Top App Bar -->
+<header class="docked w-full top-0 sticky z-50 bg-[#f6fbf0] dark:bg-stone-950 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#006b1b] dark:text-[#43A047]" data-icon="agriculture">agriculture</span>
+<span class="text-[#006b1b] dark:text-[#43A047] font-extrabold text-xl tracking-tighter">AgriDirect</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-150 text-[#181d16] dark:text-stone-400">
+
+</button>
+</div>
+</header>
+<main class="px-5 pt-4 space-y-8">
+<!-- Hero Welcome Section -->
+<section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 text-on-primary-container">
+<div class="relative z-10 space-y-2">
+<p class="font-label text-[10px] font-bold tracking-[0.2em] uppercase opacity-80">Farmer Dashboard</p>
+<h1 class="text-3xl font-bold tracking-tight leading-tight">Good morning,<br/>{{ username }}</h1>
+<p class="text-sm opacity-90 max-w-[200px]">Your harvest is ready for the market watch today.</p>
+</div>
+<div class="absolute -right-10 -bottom-10 w-48 h-48 opacity-20">
+<span class="material-symbols-outlined text-[12rem]" data-icon="potted_plant">potted_plant</span>
+</div>
+</section>
+<!-- Services Grid (Digital Agrarian Style) -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold tracking-tight">Farm Services</h2>
+
+</div>
+<div class="grid grid-cols-3 gap-4">
+<!-- Weather -->
+<div onclick="window.location.href='/weather'"
+     class="flex flex-col items-center justify-center bg-surface-container-low rounded-xl p-4 space-y-2 active:scale-95 transition-transform duration-150 cursor-pointer">
+
+    <div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined">
+            cloudy_snowing
+        </span>
+    </div>
+
+    <span class="text-[10px] font-bold tracking-wide uppercase text-center">
+        Weather
+    </span>
+
+</div>
+<!-- Market Watch -->
+<div onclick="window.location.href='/market_watch'"
+     class="flex flex-col items-center justify-center bg-surface-container-low rounded-xl p-4 space-y-2 active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+</div>
+<span class="text-[10px] font-bold tracking-wide uppercase text-center leading-tight">Market<br/>Watch</span>
+</div>
+<!-- Market Update -->
+<div onclick="window.location.href='/market_update'"
+     class="flex flex-col items-center justify-center bg-surface-container-low rounded-xl p-4 space-y-2 active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+</div>
+<span class="text-[10px] font-bold tracking-wide uppercase text-center leading-tight">Market<br/>Update</span>
+</div>
+<!-- Farming -->
+<div class="flex flex-col items-center justify-center bg-surface-container-low rounded-xl p-4 space-y-2 active:scale-95 transition-transform duration-150">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="handyman">handyman</span>
+</div>
+<span class="text-[10px] font-bold tracking-wide uppercase text-center">Farming</span>
+</div>
+<!-- Commodities -->
+<div onclick="window.location.href='/commodities'"
+     class="flex flex-col items-center justify-center bg-surface-container-low rounded-xl p-4 space-y-2 active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+</div>
+<span class="text-[10px] font-bold tracking-wide uppercase text-center">Commodities</span>
+</div>
+<!-- Fieldforce -->
+<div onclick="window.location.href='/fieldforce'"
+     class="flex flex-col items-center justify-center bg-surface-container-low rounded-xl p-4 space-y-2 active:scale-95 transition-transform duration-150 cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<span class="text-[10px] font-bold tracking-wide uppercase text-center">Fieldforce</span>
+</div>
+</div>
+</section>
+<!-- Featured Banner: Create New Ad -->
+<section class="relative group cursor-pointer active:scale-[0.98] transition-transform duration-200">
+<div class="relative overflow-hidden rounded-[2rem] bg-secondary-container p-6 flex items-center justify-between min-h-[140px]">
+<div class="relative z-10 space-y-3 max-w-[60%]">
+<h3 class="text-xl font-bold leading-tight text-on-secondary-container">Ready to sell your harvest?</h3>
+<a href="/add_product">
+    <button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold text-sm shadow-lg shadow-primary/20">
+        Create New Ad
+    </button>
+</a>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/2 overflow-hidden rounded-r-[2rem]">
+<img alt="" class="w-full h-full object-cover" data-alt="close-up of fresh organic harvested vegetables including carrots and leafy greens in a rustic wooden crate with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1pO8zmTGebnAJp4oVMcrfE0YDvS5Ztxsx45MbaDTUaZMJCQOyt0iM7liMwyiHdML9rJN2wXaShnEdGAvHP_i8V3VVPkC15ml_-EsDV5Y7Wl-8E--33ZxLuG3R1QyXby7CX3Y2ymVJEpHB4RfW9S6FeSAp3ES5Mu7g8QY6UHKNeIZAGOTw9Yc6S9OjmlRtLIjyWyrQ2HMpF02g_6DsU12aVLvfSmLA_R5IB3MtW3RTy-HZ_IQpwaMbhIstW1GFsKS3_poWIAjPXgc"/>
+<div class="absolute inset-0 bg-gradient-to-r from-secondary-container via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+
+<!-- Latest Marketplace Products -->
+<section class="mt-8">
+
+    <div class="flex items-center justify-between mb-4">
+
+        <h2 class="text-xl font-bold tracking-tight">
+            Marketplace
+        </h2>
+
+        <form method="GET" action="/">
+            <input
+                type="text"
+                name="search"
+                placeholder="🔍 Search"
+                value="{{ search if search else '' }}"
+                class="w-32 p-2 text-sm rounded-lg border border-gray-300">
+        </form>
+
+    </div>
+
+    <div class="space-y-4">
+
+        {% for product in products %}
+
+        <a href="/product/{{ product[0] }}"
+            class="bg-white rounded-2xl p-4 shadow-sm flex items-center gap-4 block hover:shadow-md transition">
+
+            {% if product[5] %}
+            <img
+                src="{{ url_for('static', filename='uploads/' ~ product[5]) }}"
+                class="w-20 h-20 rounded-xl object-cover">
+            {% else %}
+            <div class="w-20 h-20 rounded-xl bg-gray-200 flex items-center justify-center">
+                🌾
+            </div>
+            {% endif %}
+
+            <div class="flex-1">
+                <h3 class="font-bold text-lg">
+                    {{ product[1] }}
+                </h3>
+
+                <p class="text-sm text-gray-500">
+                    {{ product[2] }}
+                </p>
+
+                <p class="text-green-700 font-bold">
+                    ₹ {{ product[3] }}
+                </p>
+            </div>
+
+        </a>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="absolute bottom-0 left-0 right-0 z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6fbf0]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(24,29,22,0.06)] rounded-t-[2rem]">
+<!-- Home Active -->
+<a class="flex flex-col items-center justify-center bg-[#eaf0e4] dark:bg-[#006b1b]/20 text-[#006b1b] dark:text-[#43A047] rounded-2xl px-5 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<!-- Ads -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="/my_ads">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Ads</span>
+</a>
+<!-- Inbox -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="/inbox">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Inbox</span>
+</a>
+<!-- Alerts -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="/notifications">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Alerts</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="/profile">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</div>
+</body></html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriDirect Market Update</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002204",
+                    "tertiary": "#775447",
+                    "background": "#f6fbf0",
+                    "surface-container-low": "#f0f5ea",
+                    "primary-container": "#268630",
+                    "surface-container-high": "#e5eadf",
+                    "primary": "#006b1b",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#edf3e7",
+                    "on-secondary-fixed-variant": "#604100",
+                    "inverse-primary": "#7ddc7a",
+                    "primary-fixed": "#98f994",
+                    "surface": "#f6fbf0",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-tertiary-fixed-variant": "#603f33",
+                    "surface-container": "#eaf0e4",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f6fbf0",
+                    "outline": "#6f7a6b",
+                    "on-secondary-container": "#6a4800",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-dim": "#d6dcd1",
+                    "tertiary-container": "#926c5e",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#f7fff1",
+                    "on-background": "#181d16",
+                    "secondary-fixed": "#ffdeac",
+                    "on-surface": "#181d16",
+                    "inverse-surface": "#2c322a",
+                    "surface-container-highest": "#dfe4d9",
+                    "secondary-container": "#feb300",
+                    "surface-variant": "#dfe4d9",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#bfcab9",
+                    "on-tertiary-fixed": "#2e150b",
+                    "on-surface-variant": "#3f4a3d",
+                    "on-secondary-fixed": "#281900",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ebbcac",
+                    "secondary-fixed-dim": "#ffba38",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#7e5700",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#7ddc7a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Anchor -->
+<header class="docked w-full top-0 sticky z-50 bg-[#f6fbf0] dark:bg-stone-950 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006b1b] dark:text-[#43A047]" data-icon="agriculture">agriculture</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold text-xl tracking-tighter text-[#006b1b] dark:text-[#43A047]">AgriDirect</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#181d16] dark:text-stone-400 hover:opacity-80 transition-opacity" data-icon="search">search</button>
+<button class="material-symbols-outlined text-[#181d16] dark:text-stone-400 hover:opacity-80 transition-opacity" data-icon="sort">sort</button>
+</div>
+</header>
+<main class="pb-32">
+<!-- Market Sentiment Hero Section -->
+<section class="px-6 py-6">
+<div class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 text-on-primary-container shadow-xl">
+<div class="relative z-10">
+<span class="font-label text-[10px] font-bold tracking-[0.2em] uppercase opacity-80">Live Market Intelligence</span>
+<h2 class="font-headline text-3xl font-bold mt-2 leading-tight">Harvest Trends &amp; Subsidy Updates</h2>
+<p class="mt-4 text-sm font-medium leading-relaxed opacity-90 max-w-[240px]">Real-time trade analysis and government aid notifications for the modern agrarian.</p>
+<div class="flex items-center gap-4 mt-8">
+<div class="flex flex-col">
+<span class="text-2xl font-extrabold tracking-tight">↑ 4.2%</span>
+<span class="text-[10px] uppercase tracking-wider opacity-70">Wheat Export Growth</span>
+</div>
+<div class="w-px h-8 bg-on-primary-container/20"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-extrabold tracking-tight">$1.2B</span>
+<span class="text-[10px] uppercase tracking-wider opacity-70">Total Subsidies Issued</span>
+</div>
+</div>
+</div>
+<!-- Abstract Texture Overlay -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+</div>
+</section>
+<!-- Dynamic Category Chips -->
+<section class="px-6 py-4 overflow-x-auto hide-scrollbar flex gap-3">
+<div class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold flex-shrink-0 transition-all active:scale-95">All Intelligence</div>
+<div class="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium flex-shrink-0 transition-all active:scale-95">Trade Reports</div>
+<div class="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium flex-shrink-0 transition-all active:scale-95">Subsidies</div>
+<div class="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium flex-shrink-0 transition-all active:scale-95">Logistics</div>
+</section>
+<!-- Featured News - Asymmetric Bento Pattern -->
+<section class="px-6 py-4 grid grid-cols-1 gap-6">
+<div class="relative rounded-[1.5rem] bg-surface-container-low overflow-hidden group">
+<img class="w-full h-64 object-cover" data-alt="cinematic close-up of high-quality wheat stalks in a golden field during sunset with rich earthy tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjEDKfKx55s-rT1fohx6ZAZVBtR7AJ0qaZ1AleDnbf1VkqmSkbvqv5HRS2TQaw4o1NinBEQpbioku-rBWH5P1-nzz-4u2nebs2h1cDdHri8UFbCV0Irj1KbUFETrfj1w9gl7Tn2CbXJ-GnGGQ4c8qb2VXpXn08InCwsH57LLDaT95tKYF9CpdGmwUtIw4boAyRVz1eBfOo496f0GRiKm-hXRxqSJ7CvkqMt3R97F0VUXm2wpBhPlzwqr9VrpKXvUF34WOkT0ahU2M"/>
+<div class="p-6">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-secondary text-white text-[10px] font-bold px-2 py-0.5 rounded tracking-wide uppercase">New Policy</span>
+<span class="text-label-md text-on-surface-variant text-[12px]">4 mins ago</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Digital Credit Scheme: Government Announces $500M Direct Fund</h3>
+<p class="mt-2 text-on-surface-variant text-sm leading-relaxed">A new initiative aimed at streamlining small-scale farm financing through direct blockchain-verified deposits.</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container rounded-[1.5rem] p-5 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="trending_up">trending_up</span>
+<div>
+<h4 class="font-headline font-bold text-sm leading-tight text-on-surface">Grain Prices Outlook</h4>
+<span class="text-primary text-[11px] font-bold mt-1 inline-block">VIEW REPORT</span>
+</div>
+</div>
+<div class="bg-surface-container-highest rounded-[1.5rem] p-5 flex flex-col justify-between aspect-square">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="contract">contract</span>
+<div>
+<h4 class="font-headline font-bold text-sm leading-tight text-on-surface">Export Licenses 2024</h4>
+<span class="text-on-surface-variant text-[11px] font-bold mt-1 inline-block">12 DOCUMENTS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Trade Insights Feed -->
+<section class="px-6 py-6 space-y-6">
+<div class="flex justify-between items-end mb-4">
+<h3 class="font-headline text-2xl font-bold tracking-tight text-on-surface">Market Pulse</h3>
+<span class="text-primary font-bold text-sm">See all updates</span>
+</div>
+<!-- List items with organic layering style -->
+<div class="space-y-4">
+<div class="flex gap-4 p-1 rounded-2xl bg-surface-container-low transition-all active:scale-[0.98]">
+<img class="w-24 h-24 rounded-xl object-cover" data-alt="vibrant fresh vegetables in a wooden crate with soft morning sunlight filtered through leaves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpJQAERE8IpxcICzA8BrEHNczCjeSrv_S-SAtfiaw4yoDt4ejdiEd55LVOJ9y6FuQRn0LESiRDufK_GUqhSwIWmtCjURGS55w8WtwJobucLL89VSgBrrayGwc848bnBaYCsNFIAaPcdObbFed_gxiPk41l6rQ8pc0aai-p7ugqQY3rwe5t82lOpVULqu9_QD69vXf8_tvct6niqFFL1UIu4zWl4kC4dctu25kYD_iJcEcYF4IEJFZVa8_1HNbKHlFhRVVHRLT9XaI"/>
+<div class="flex flex-col justify-center py-2">
+<span class="font-label text-[10px] font-bold tracking-wider text-secondary uppercase">Logistic Update</span>
+<h4 class="font-headline font-bold text-sm text-on-surface mt-1">Cold Chain Expansion in Northern Regions</h4>
+<p class="text-on-surface-variant text-[12px] mt-1 line-clamp-1">New refrigerated hubs expected to reduce post-harvest loss by 30%.</p>
+</div>
+</div>
+<div class="flex gap-4 p-1 rounded-2xl bg-surface-container-low transition-all active:scale-[0.98]">
+<div class="w-24 h-24 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container">
+<span class="material-symbols-outlined text-4xl" data-icon="finance">finance</span>
+</div>
+<div class="flex flex-col justify-center py-2">
+<span class="font-label text-[10px] font-bold tracking-wider text-secondary uppercase">Subsidy Alert</span>
+<h4 class="font-headline font-bold text-sm text-on-surface mt-1">Seed Allocation Portal Now Open</h4>
+<p class="text-on-surface-variant text-[12px] mt-1 line-clamp-1">Kharif season seed subsidies are live. Apply before May 15.</p>
+</div>
+</div>
+<div class="flex gap-4 p-1 rounded-2xl bg-surface-container-low transition-all active:scale-[0.98]">
+<img class="w-24 h-24 rounded-xl object-cover" data-alt="aerial drone view of precise tractor patterns in a dark fertile soil field with soft overcast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA67JMf2PZaXicJTMnuAgDXlL6MZxus2Fi27hZnBz0Fil2wIFtCzk4i24ppSM6B4ZET4zxwa9Nfg0N6oBFZZAm7--w0t8vkTRvt16KiCvqrIXNfZXN4iUerDJPdees_35UOsSbBjaWuNr8I6iRaJkEJW8xQ75Wq17wWEj2aU0sIH6i6_xcI5BXIOsl_nrPZoONbEsP6Pp0F41NDgwRiF6FBnRYzmeibLHShaa5_sKtRO8ihlMfmAy09CR5KWyoTeQ0uTZY7tOzeXOo"/>
+<div class="flex flex-col justify-center py-2">
+<span class="font-label text-[10px] font-bold tracking-wider text-secondary uppercase">Trade Report</span>
+<h4 class="font-headline font-bold text-sm text-on-surface mt-1">International Paddy Demand Spikes</h4>
+<p class="text-on-surface-variant text-[12px] mt-1 line-clamp-1">Global market shifts increase premium paddy export value.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Subsidy Tracker Component -->
+<section class="px-6 py-4">
+<div class="bg-surface-container-highest rounded-[2rem] p-8 border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg" data-icon="account_balance">account_balance</span>
+<h3 class="font-headline text-lg font-bold">Your Subsidy Status</h3>
+</div>
+<div class="space-y-6">
+<div class="relative">
+<div class="flex justify-between items-center mb-2">
+<span class="text-xs font-bold text-on-surface-variant uppercase">Fertilizer Voucher #981</span>
+<span class="text-xs font-bold text-primary">85% Processed</span>
+</div>
+<div class="w-full h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[85%]"></div>
+</div>
+</div>
+<div class="flex gap-4 pt-4 border-t border-outline-variant/20">
+<div class="flex-1">
+<span class="block text-[10px] font-bold text-on-surface-variant/60 uppercase">Scheduled Release</span>
+<span class="block font-headline font-bold text-base">Oct 12, 2024</span>
+</div>
+<div class="flex-1">
+<span class="block text-[10px] font-bold text-on-surface-variant/60 uppercase">Est. Amount</span>
+<span class="block font-headline font-bold text-base text-secondary">$1,450.00</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6fbf0]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(24,29,22,0.06)] rounded-t-[2rem] border-t border-[#bfcab9]/20">
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Ads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Inbox</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#eaf0e4] dark:bg-[#006b1b]/20 text-[#006b1b] dark:text-[#43A047] rounded-2xl px-5 py-1.5 transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Alerts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

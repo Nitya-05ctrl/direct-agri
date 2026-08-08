@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Naagali - My Ads</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#84cc16', // lime-500
+              DEFAULT: '#65a30d', // lime-600
+              dark: '#4d7c0f', // lime-700
+            },
+            surface: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mobile-screen {
+      width: 375px;
+      height: 812px;
+      background-color: white;
+      border-radius: 40px;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 8px solid #1f2937;
+      scrollbar-width: none;
+    }
+    .mobile-screen::-webkit-scrollbar {
+      display: none;
+    }
+    .header-bg {
+      background: linear-gradient(180deg, #65a30d 0%, #84cc16 100%);
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+    }
+  </style>
+</head>
+<body class="p-10 flex flex-wrap gap-8 justify-center">
+<!-- BEGIN: Screen 1 - My Ads -->
+<section class="mobile-screen flex flex-col" data-purpose="screen-my-ads">
+<header class="header-bg p-6 pb-12 text-white flex items-center gap-3">
+<div class="bg-white rounded-full p-1 w-10 h-10 flex items-center justify-center">
+<img alt="Logo" class="rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtnWWx5RlFCwDA8zN8ExCkCvz6a_QQLg2sdmoI6GNqfP_S4I2ICLhaGuoosA9tugnrNoiXGzoaeSZqZqmrWmqi9sEtd5cdMksnhn8RqQNyeVmEVJd0QwYr0dBkpib_Wqldig_LVTMvYAxH96R-AsxQKdoaLWz2RV_g20cyW8G2kCxWonPNIB73fmrWvEVQs3Vr5y1jJ4Jf5C2eDHt_Vbu0ZHQeEG7auUeADMA5Y-Jg61KX7eD51DiZfuCZzOdCq2FC_vPpa_pKP0U"/>
+</div>
+<h1 class="text-2xl font-bold">My ads</h1>
+</header>
+<main class="flex-grow -mt-6 px-4">
+
+    <a href="/add_product">
+        <button class="w-full bg-white border-2 border-brand text-brand font-bold py-3 rounded-xl shadow-sm mb-6">
+            CREATE NEW AD
+        </button>
+    </a>
+
+    <div class="flex items-center gap-2 mb-4 text-gray-600">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2">
+            </path>
+        </svg>
+
+        <span class="font-semibold">Recent Ads</span>
+    </div>
+
+    <div class="space-y-4">
+
+        {% if products %}
+
+            {% for product in products %}
+
+            <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm flex justify-between">
+
+                <div class="flex gap-3">
+
+    {% if product[5] %}
+
+    <img
+        src="{{ url_for('static', filename='uploads/' + product[5]) }}"
+        alt="Product Image"
+        class="w-20 h-20 rounded-lg object-cover border">
+
+    {% endif %}
+
+    <div>
+
+        <h3 class="font-bold text-gray-800">
+            {{ product[1] }}
+        </h3>
+
+        <p class="text-xs text-gray-400 mb-2">
+            Quantity: {{ product[4] }} Kg
+        </p>
+
+        <p class="text-xs text-gray-500">
+            Category: {{ product[2] }}
+        </p>
+
+    </div>
+
+</div>
+
+                <div class="text-right">
+
+                    <p class="text-brand font-bold">
+                        ₹ {{ product[3] }}
+                    </p>
+                    <a href="/edit_product/{{ product[0] }}">
+                     <button class="mt-3 mr-2 bg-blue-500 text-white px-3 py-1 rounded-lg text-sm">
+                          Edit
+                    </button>
+                    </a>
+                     <a href="/delete_product/{{ product[0] }}">
+                          <button class="mt-3 bg-red-500 text-white px-3 py-1 rounded-lg text-sm">
+                     Delete
+                </button>
+                </a>
+
+            </div>
+
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="bg-white p-6 rounded-xl border text-center text-gray-500">
+                No advertisements posted yet.
+            </div>
+
+        {% endif %}
+
+    </div>
+
+</main>
+<nav class="bg-white border-t flex justify-around py-3">
+<div class="flex flex-col items-center text-brand">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24">
+<path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"></path>
+</svg>
+<span class="text-[10px]">My ads</span>
+</div>
+<div class="flex flex-col items-center text-gray-400">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+</svg>
+<span class="text-[10px]">Notifications</span>
+</div>
+<div class="flex flex-col items-center text-gray-400">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+</svg>
+<span class="text-[10px]">Inbox</span>
+</div>
+<div class="flex flex-col items-center text-gray-400">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+<span class="text-[10px]">More</span>
+</div>
+</nav>
+</section>
+<!-- END: Screen 1 -->
+</body></html>

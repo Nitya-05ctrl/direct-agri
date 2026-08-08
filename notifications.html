@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002204",
+                    "tertiary": "#775447",
+                    "background": "#f6fbf0",
+                    "surface-container-low": "#f0f5ea",
+                    "primary-container": "#268630",
+                    "surface-container-high": "#e5eadf",
+                    "primary": "#006b1b",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#edf3e7",
+                    "on-secondary-fixed-variant": "#604100",
+                    "inverse-primary": "#7ddc7a",
+                    "primary-fixed": "#98f994",
+                    "surface": "#f6fbf0",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-tertiary-fixed-variant": "#603f33",
+                    "surface-container": "#eaf0e4",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f6fbf0",
+                    "outline": "#6f7a6b",
+                    "on-secondary-container": "#6a4800",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-dim": "#d6dcd1",
+                    "tertiary-container": "#926c5e",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#f7fff1",
+                    "on-background": "#181d16",
+                    "secondary-fixed": "#ffdeac",
+                    "on-surface": "#181d16",
+                    "inverse-surface": "#2c322a",
+                    "surface-container-highest": "#dfe4d9",
+                    "secondary-container": "#feb300",
+                    "surface-variant": "#dfe4d9",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#bfcab9",
+                    "on-tertiary-fixed": "#2e150b",
+                    "on-surface-variant": "#3f4a3d",
+                    "on-secondary-fixed": "#281900",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ebbcac",
+                    "secondary-fixed-dim": "#ffba38",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#7e5700",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#7ddc7a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="docked w-full top-0 sticky z-50 bg-[#f6fbf0] dark:bg-stone-950 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006b1b] dark:text-[#43A047]" data-icon="agriculture">agriculture</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold text-xl tracking-tighter text-[#006b1b] dark:text-[#43A047]">AgriDirect</h1>
+</div>
+<div class="flex gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-150 text-[#181d16] dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="px-6 py-4 max-w-md mx-auto">
+<!-- Editorial Headline -->
+<div class="mb-8 mt-2">
+<span class="font-label text-[10px] font-bold tracking-[0.2em] text-secondary uppercase block mb-1">ACTIVITY CENTER</span>
+<h2 class="text-3xl font-extrabold tracking-tight text-on-surface">Alerts</h2>
+</div>
+<!-- Filter Chips (Organic Selection) -->
+<div class="flex gap-2 mb-8 overflow-x-auto no-scrollbar pb-2">
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary text-sm font-semibold whitespace-nowrap">All Notifications</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-medium whitespace-nowrap">Buyer Requests</button>
+<button class="px-5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-medium whitespace-nowrap">Market Updates</button>
+</div>
+<!-- Notification List (Editorial Layout) -->
+<div class="space-y-6">
+<!-- Category Group: Today -->
+<div class="space-y-4">
+<h3 class="font-label text-[11px] font-bold tracking-widest text-outline uppercase px-2">Today</h3>
+<!-- Urgent Request Card -->
+<div class="bg-surface-container-lowest p-5 rounded-[1.5rem] flex gap-4 items-start shadow-[0_4px_24px_rgba(24,29,22,0.04)] relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary" data-icon="potted_plant">potted_plant</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="font-label text-[10px] font-bold tracking-wide text-secondary uppercase">Buyer Request</span>
+<span class="text-[10px] text-outline">2m ago</span>
+</div>
+<h4 class="font-bold text-on-surface text-base mb-1">Urgent: 500kg Organic Tomatoes</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-3">Hotel Regency in Delhi is looking for immediate delivery of farm-fresh A-grade tomatoes.</p>
+<button class="text-primary font-bold text-sm flex items-center gap-1 group">
+                            Respond Now
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Price Alert (Bento Style Card) -->
+<div class="bg-primary p-6 rounded-[1.5rem] text-on-primary relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-lg" data-icon="trending_up">trending_up</span>
+<span class="font-label text-[10px] font-bold tracking-widest uppercase opacity-80">Market Shift</span>
+</div>
+<h4 class="text-xl font-bold leading-tight mb-2">Wheat prices surged by 12% in your region.</h4>
+<p class="text-on-primary/80 text-sm mb-4">Current average: ₹2,450/quintal. It might be a good time to list your harvest.</p>
+<div class="flex gap-3">
+<button class="bg-white text-primary px-4 py-2 rounded-xl text-xs font-bold shadow-sm">View Market</button>
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-xl text-xs font-bold">Post Ad</button>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-20">
+<span class="material-symbols-outlined text-8xl" data-icon="agriculture" style="font-variation-settings: 'wght' 200;">agriculture</span>
+</div>
+</div>
+</div>
+<!-- Category Group: Yesterday -->
+<div class="space-y-4">
+<h3 class="font-label text-[11px] font-bold tracking-widest text-outline uppercase px-2">Yesterday</h3>
+<!-- System Update -->
+<div class="bg-surface-container-low p-5 rounded-[1.5rem] flex gap-4 items-center">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="verified_user">verified_user</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface text-sm">Profile Verified</h4>
+<span class="text-[10px] text-outline">Yesterday</span>
+</div>
+<p class="text-on-surface-variant text-xs mt-0.5">Your farmer identity has been verified. You now have the 'Trusted Seller' badge.</p>
+</div>
+</div>
+<!-- Shared Component Logic: Notification with image -->
+<div class="bg-surface-container p-4 rounded-[1.5rem] flex gap-4">
+<div class="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-white">
+<img alt="Harvested Onion" class="w-full h-full object-cover" data-alt="Close-up of fresh red onions with papery skin on a rustic wooden background with natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBovpxYRpCBscXGkrgr7zBJFaiuqEXHtd_h3m5rV9vSz82qICCSbRX-UxnHk5BPGnGIwgy-TzlhBBOYMcb40goaN3EuyW4lyUsq7P9GAphGIixGMAS-ZevAq3D-RfCaVAtQV_S6S2mUsH7K0-vxso6BlQVdL3A432ugoOPvysQJKbjHR8_ZoNiiy0Ig-FP55227sOkpiY_AHk6dlGoUZ3oxcj90Qrc5DV7ilg33S6QyIfp0_AHgJB5FYQ1Ea_SJggecEI3-VqmocVs"/>
+</div>
+<div class="flex-1 py-1">
+<div class="flex justify-between">
+<span class="font-label text-[9px] font-extrabold tracking-widest text-primary uppercase">Ad Performance</span>
+</div>
+<h4 class="font-bold text-on-surface text-sm">Your Onion Ad reached 500+ buyers</h4>
+<p class="text-on-surface-variant text-xs mt-1">Check out who's viewing your listing and manage offers.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- "The Digital Agrarian" Empty State Space -->
+<div class="py-12 flex flex-col items-center opacity-40">
+<span class="material-symbols-outlined text-4xl mb-2" data-icon="eco">eco</span>
+<p class="text-xs font-medium italic">End of recent updates</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6fbf0]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(24,29,22,0.06)] rounded-t-[2rem] border-t border-[#bfcab9]/20">
+<div class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Ads</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Inbox</span>
+</div>
+<!-- ACTIVE TAB: Alerts -->
+<div class="flex flex-col items-center justify-center bg-[#eaf0e4] dark:bg-[#006b1b]/20 text-[#006b1b] dark:text-[#43A047] rounded-2xl px-5 py-1.5 active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="notifications" style="font-variation-settings: 'FILL' 1;">notifications</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Alerts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase">Profile</span>
+</div>
+</nav>
+</body></html>

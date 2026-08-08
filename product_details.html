@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Basmati Paddy - AgriDirect</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#006b1b",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#edf3e7",
+                    "secondary-container": "#feb300",
+                    "primary-fixed": "#98f994",
+                    "on-secondary-fixed-variant": "#604100",
+                    "surface-dim": "#d6dcd1",
+                    "surface-variant": "#dfe4d9",
+                    "surface-tint": "#006e1c",
+                    "surface-container-low": "#f0f5ea",
+                    "on-primary-container": "#f7fff1",
+                    "on-error-container": "#93000a",
+                    "inverse-primary": "#7ddc7a",
+                    "surface-container": "#eaf0e4",
+                    "on-primary-fixed": "#002204",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#ffdeac",
+                    "surface-bright": "#f6fbf0",
+                    "on-tertiary-fixed": "#2e150b",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e5eadf",
+                    "outline": "#6f7a6b",
+                    "on-surface-variant": "#3f4a3d",
+                    "on-tertiary-container": "#fffbff",
+                    "tertiary-fixed": "#ffdbcf",
+                    "primary-container": "#268630",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#7ddc7a",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2c322a",
+                    "surface-container-highest": "#dfe4d9",
+                    "on-secondary-container": "#6a4800",
+                    "on-primary": "#ffffff",
+                    "background": "#f6fbf0",
+                    "secondary-fixed-dim": "#ffba38",
+                    "secondary": "#7e5700",
+                    "on-background": "#181d16",
+                    "tertiary-fixed-dim": "#ebbcac",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-tertiary-fixed-variant": "#603f33",
+                    "on-surface": "#181d16",
+                    "on-secondary-fixed": "#281900",
+                    "tertiary": "#775447",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#926c5e",
+                    "surface": "#f6fbf0",
+                    "outline-variant": "#bfcab9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "display": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        background: rgba(246, 251, 240, 0.8);
+        backdrop-filter: blur(20px);
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .organic-shadow {
+        box-shadow: 0 24px 48px -12px rgba(24, 29, 22, 0.08);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top AppBar -->
+<nav class="sticky top-0 z-50 w-full bg-surface dark:bg-surface-dim">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
+<button
+    onclick="history.back()"
+    class="p-2 -ml-2 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">arrow_back</span>
+</button>
+<span class="font-headline font-bold text-primary dark:text-primary-fixed text-headline-md tracking-tight">AgriDirect</span>
+<button class="p-2 -mr-2 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-100">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">share</span>
+</button>
+</div>
+</nav>
+<main class="pb-32">
+<!-- Hero Image Section -->
+<div class="relative w-full aspect-[4/5] overflow-hidden bg-surface-container">
+{% if product[5] %}
+
+<img
+    src="{{ url_for('static', filename='uploads/' ~ product[5]) }}"
+    class="w-full h-full object-cover">
+
+{% else %}
+
+<div class="w-full h-full flex items-center justify-center bg-gray-200">
+    No Image Available
+</div>
+
+{% endif %}
+<div class="absolute bottom-6 left-6 right-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-md font-semibold tracking-wide uppercase">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    Premium Selection
+                </div>
+</div>
+</div>
+<!-- Product Summary Section -->
+<section class="px-6 pt-8">
+<div class="flex justify-between items-start mb-2">
+<h1 class="font-headline text-3xl font-extrabold text-on-surface leading-tight tracking-tight max-w-[70%]">
+    {{ product[1] }}
+</h1>
+<div class="flex flex-col items-end">
+<span class="font-display text-2xl font-bold text-secondary">
+    ₹{{ product[3] }}
+</span>
+<span class="font-label text-label-sm text-on-surface-variant font-medium uppercase tracking-widest">Per Quintal</span>
+<p class="text-on-surface-variant mt-2 text-sm">
+        Quantity Available: {{ product[4] }} KG
+    </p>
+</div>
+</div>
+<!-- Seller Info -->
+<div class="flex items-center gap-3 mt-6 p-4 rounded-xl bg-surface-container-low border border-outline-variant/10">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Green Valley Co-op" class="w-full h-full object-cover" data-alt="A professional portrait of a smiling farmer in a clean, modern agricultural setting. The lighting is bright and high-key, emphasizing transparency and professional status. The background shows a hint of a high-tech warehouse, blending traditional farming with modern logistics. The color palette is dominated by soft greens and whites, reflecting a clean, organic brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1Duw08-t5XxW2ESeNG52iatXFNEAtplflRES6QVxMnuQRG9JKO0dJh98Nlzpz4sYcZsaSVK_Y_aEVvwm9FKN5obz32Hoo2GHV7LMwYs4go0MdtYI4xVSxwCfqa529NheoOsrHfzIi4-wcHZ_J9nkVmdinIvLGLqGObEkmrt4OIcCdQuQ2OP2gFM2vnuNAKz62JXX0hSvrvBNWBtNBHtbeBNpCAZBKq1OXZJJTjbF-e7u3hv6SsOzPqGKoDTatCj-qthLk39G-Q8U"/>
+</div>
+<div>
+<h3 class="font-headline font-semibold text-on-surface">
+    {{ product[6] if product[6] else 'Farmer' }}
+</h3>
+<p class="font-label text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+                       {{ product[7] if product[7] else 'Address not provided' }}
+                    </p>
+</div>
+
+</div>
+</section>
+<!-- Product Information -->
+<section class="px-6 mt-8 grid grid-cols-2 gap-4">
+
+    <div class="bg-surface-container-high p-4 rounded-xl">
+        <p class="text-sm text-on-surface-variant">Category</p>
+        <h3 class="font-bold text-lg">{{ product[2] }}</h3>
+    </div>
+
+    <div class="bg-surface-container-high p-4 rounded-xl">
+        <p class="text-sm text-on-surface-variant">Price</p>
+        <h3 class="font-bold text-lg">₹{{ product[3] }}</h3>
+    </div>
+
+    <div class="bg-surface-container-high p-4 rounded-xl">
+        <p class="text-sm text-on-surface-variant">Quantity</p>
+        <h3 class="font-bold text-lg">{{ product[4] }} Kg</h3>
+    </div>
+
+    <div class="bg-surface-container-high p-4 rounded-xl">
+        <p class="text-sm text-on-surface-variant">Seller</p>
+        <h3 class="font-bold text-lg">
+            {{ product[6] if product[6] else "Farmer" }}
+        </h3>
+    </div>
+
+</section>
+<!-- Product Details -->
+<section class="px-6 mt-10">
+
+    <h2 class="font-headline text-headline-md font-bold mb-4">
+        Product Details
+    </h2>
+
+    <div class="bg-surface-container-low rounded-xl p-5 space-y-4">
+
+        <div class="flex justify-between">
+            <span class="text-on-surface-variant">Product Name</span>
+            <span class="font-semibold">{{ product[1] }}</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span class="text-on-surface-variant">Category</span>
+            <span class="font-semibold">{{ product[2] }}</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span class="text-on-surface-variant">Price</span>
+            <span class="font-semibold">₹{{ product[3] }}</span>
+        </div>
+
+        <div class="flex justify-between">
+            <span class="text-on-surface-variant">Quantity</span>
+            <span class="font-semibold">{{ product[4] }} Kg</span>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+<!-- Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 glass-nav border-t border-transparent px-6 py-5 pb-safe">
+
+    <a href="tel:{{ product[8] }}"
+       class="block w-full bg-primary text-white font-bold py-4 rounded-xl text-center shadow-lg">
+
+        📞 Call Farmer
+
+    </a>
+
+</div>
+<!-- Micro-interaction Script -->
+<script>
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                let x = e.clientX - e.target.offsetLeft;
+                let y = e.clientY - e.target.offsetTop;
+                let ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.width = '100px';
+                ripple.style.height = '100px';
+                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.borderRadius = '50%';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.transform = 'translate(-50%, -50%) scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                this.appendChild(ripple);
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Add CSS for ripple
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes ripple {
+                to {
+                    transform: translate(-50%, -50%) scale(4);
+                    opacity: 0;
+                }
+            }
+            button { position: relative; overflow: hidden; }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body></html>

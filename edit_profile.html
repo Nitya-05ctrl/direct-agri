@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+<div class="bg-white p-6 rounded-xl shadow-lg w-96">
+
+    <h1 class="text-2xl font-bold mb-6">
+        Edit Profile
+    </h1>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="name"
+            value="{{ user[0] }}"
+            class="w-full border p-3 rounded mb-4">
+
+        <input
+            type="email"
+            name="email"
+            value="{{ user[1] }}"
+            class="w-full border p-3 rounded mb-4">
+
+        
+        <input
+            type="text"
+            name="address"
+            value="{{ user[2] if user[2] else '' }}"
+            placeholder="Address"
+            class="w-full border p-3 rounded mb-4">
+
+        <input
+            type="text"
+            name="phone"
+            value="{{ user[3] if user[3] else '' }}"
+            placeholder="Phone Number"
+            class="w-full border p-3 rounded mb-4">
+
+        <button
+            type="submit"
+            class="w-full bg-green-600 text-white p-3 rounded">
+
+
+            Save Changes
+
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

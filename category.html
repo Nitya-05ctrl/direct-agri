@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Naagali - Select Category</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#84cc16', // lime-500
+              DEFAULT: '#65a30d', // lime-600
+              dark: '#4d7c0f', // lime-700
+            },
+            surface: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mobile-screen {
+      width: 375px;
+      height: 812px;
+      background-color: white;
+      border-radius: 40px;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 8px solid #1f2937;
+      scrollbar-width: none;
+    }
+    .mobile-screen::-webkit-scrollbar {
+      display: none;
+    }
+    .grid-item-card {
+      aspect-ratio: 1 / 1.1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      transition: all 0.2s;
+      background: #fdfdfd;
+    }
+    .active-card {
+      background-color: #65a30d;
+      color: white;
+      border-color: #65a30d;
+    }
+  </style>
+</head>
+<body class="p-10 flex flex-wrap gap-8 justify-center">
+<!-- BEGIN: Screen 2 - Category Selection -->
+<section class="mobile-screen flex flex-col items-center p-6" data-purpose="screen-categories">
+<div class="mt-8 flex flex-col items-center">
+<!-- Naagali Logo -->
+<img alt="Naagali Logo" class="h-12 mb-2 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMbeDqJye8wsw0d_QuiblowZb_1kts5flZ1COoCgSQvZsGc0NbsCsjfjSkxrjQjM763qOEKSa32Syfqpnc75vFkp1vYH4OWD0kXZitQvOykK0tFahE0rwSFZhxQALOe1Pbm0DC8eI3keKmsk4HOJ0asjUgZltTl30U3itjcOa-UBBT489KDuhpzsE03Yc-7p1YDX0iP1MxYBMfd5ll1oXTDnTK4offWi_-Xs5YicAPxSw-j11EW7_lr0idprHPTK0Y6T8FV2lvNVg"/>
+<h2 class="text-xl font-bold text-gray-800 mt-6">Select the category</h2>
+</div>
+<div class="grid grid-cols-2 gap-4 w-full mt-10">
+<!-- Commodities -->
+<div class="grid-item-card active-card shadow-md">
+<div class="bg-white p-3 rounded-lg mb-2">
+<img alt="Commodities Icon" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9-BiXdhL6ANCw5rnL7dLE5Hpow73KZNEW9XzkaQ-qiRIspNVzyOtDumwK-netmaHxwpHFHlFRTFKCBfMZ2uHKK5uwzXEuaxkHn3P-VPCg_6qXFdiaKFF-Jj1QVZbljZNCdZyZanbu7v9KSUKM3LntsKKSzGBMZ9WDUa0q_bp6yNOxg0fGIDWo348ONaRYUWP-yaS6FtRW_g-06nyJL4aUfeiwJhWN0YtIUpx6HR1mbgpZ22YInic_i6vZSp0GU6N5fh4K4U0ZvxM"/>
+</div>
+<span class="text-sm font-bold uppercase tracking-tight">Commodities</span>
+</div>
+<!-- Cattle -->
+<div class="grid-item-card text-brand bg-gray-50 border-gray-100">
+<div class="p-3 mb-2">
+<img alt="Cattle Icon" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYAajb9Yvtz9UYZGFfmRtPVb44nJsE6-z7dfgsgotIkK6obUCn9vv9NfzewoXdBP7TFyL73Q8snc_DcVvMqKc4ydn9bN59imjCiDO6rt4MrC9Up4cWgHo3-uGpOBwBdW0adVfdUNubUaeZp5M6QXuOuZsYrLRbPPAgtEr6huonF4NNRrtPxxdMw_cO0fnoKPa51zboOIIV_caDSUnYpGxmXUII4cUQG2d3oLL28WMGW3El10Vu_m5zQ0GgFN-qrw9p82AizLvHhAM"/>
+</div>
+<span class="text-sm font-bold uppercase tracking-tight">Cattle</span>
+</div>
+<!-- Equipments -->
+<div class="grid-item-card text-brand bg-[#1f2937] border-gray-100">
+<div class="p-3 mb-2">
+<img alt="Equipments Icon" class="w-10 h-10 object-contain brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV6nQmvQ0Cv21NwG8Gvq51nfoIGAOvaoHTjSFLDXHU0VCgc8448EiCjkOtTX-Fg5lLvOVejnR7HxZgjfYOggQMqyILInFYUOPR0k4_DkgNUJUXD56OcY6XQz7mHcy-a2MXGTEvYe5c1Seb6lTSuyonc8VIYLoCd7J46v1hJpNf4IVhHtR9HETTDeu8_PdY29HqihFq-3y4e0fcf2Cc2jVmbh5CfeSFlNrpClThneGvYqDPn9J3kYtBynPmd2v2oXsK1fXNs2nWDWw"/>
+</div>
+<span class="text-sm font-bold uppercase tracking-tight">Equipments</span>
+</div>
+<!-- Fieldforce -->
+<div class="grid-item-card text-brand bg-gray-50 border-gray-100">
+<div class="p-3 mb-2">
+<img alt="Fieldforce Icon" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhN3W4X6qklPYTSgnjXoVbLPbOIjePTPPHQZA1y4mbwvDhVV26WbaKx9lvgW_Ksb8imsDD8_7Oxq5LG10njD2rKSX-ZFAd0bDS79X0-ITCjqqZxDbsx_TCo-fLUnGADLkfsYBp73J3qkBgng758HXfsq0QEaAsF74R8LTYQwBa1jrKU2t5M4UBbXAHNOucEiCr0xyy28MLBMJYxiqLMVc9-LNdu-woD3Lde7AHmWoY9_P9iGv4j18_QrwFwK_iKp6-NH5g4Gf-cro"/>
+</div>
+<span class="text-sm font-bold uppercase tracking-tight">Fieldforce</span>
+</div>
+</div>
+<button class="mt-12 w-full bg-brand hover:bg-brand-dark text-white font-bold py-4 rounded-xl shadow-lg transition-colors uppercase tracking-widest text-sm">
+    CONTINUE
+  </button>
+</section>
+<!-- END: Screen 2 -->
+</body></html>

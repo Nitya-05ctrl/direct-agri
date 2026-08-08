@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Naagali - Select Sub-category</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#84cc16', // lime-500
+              DEFAULT: '#65a30d', // lime-600
+              dark: '#4d7c0f', // lime-700
+            },
+            surface: '#f9fafb',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      background-color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    .mobile-screen {
+      width: 375px;
+      height: 812px;
+      background-color: white;
+      border-radius: 40px;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 8px solid #1f2937;
+      scrollbar-width: none;
+    }
+    .mobile-screen::-webkit-scrollbar {
+      display: none;
+    }
+    .grid-item-card {
+      aspect-ratio: 1 / 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      transition: all 0.2s;
+    }
+    .active-card {
+      background-color: #65a30d;
+      color: white;
+      border-color: #65a30d;
+    }
+  </style>
+</head>
+<body class="p-10 flex flex-wrap gap-8 justify-center">
+<!-- BEGIN: Screen 3 - Sub-category Selection -->
+<section class="mobile-screen flex flex-col items-center p-6" data-purpose="screen-sub-categories">
+<div class="flex flex-col items-center mt-4">
+<img alt="Logo" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8NkiNbiH57ZgJCr4R_2EEaflgrHjGjeYmE3ML2Haa9IGTBpmFgHFVGLcTtF3DTwzdX9-1E1wRN8GYzLFdaT6i6IC10V9ttl2dfB7YEaqkPnebQNd83U9SCvhOMasvbLf_F1DfGfZBX4raw_lYJSfYhbFrrpZiQxbZDjxfz0TCOcQkQNxxG5qoKVX3KOZMVBYt9lWQccf4HBzxcFjMhwOdsAhA6vOCChZ4_F1i4VqqEYbLwmfT7dguOV685Y8ly0RTCdZZuZa1W4w"/>
+<h2 class="text-lg font-semibold text-gray-700 mt-4">Select the sub-category</h2>
+</div>
+<div class="grid grid-cols-3 gap-3 w-full mt-8">
+<!-- Paddy -->
+<div class="grid-item-card active-card text-xs">
+<span class="font-bold">Paddy</span>
+</div>
+<!-- Cotton -->
+<div class="grid-item-card">
+<img alt="Cotton" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuLS7dzrMOS7Rph_wZY7t5SYVoakhUXXpFEjn56vEZG8300F0Pl1oD5dgwEvVxTOXPacV3RI9HMgzLYk9D4JAy3uT2O0WpwwFwv1t1oA0O4sxgd_DpOVIrS1qoXKTA_TLh6BH05sEQpCiFxGIAxrfXvu68XTyBfnOGUVNr1aQXj3j0i02HjnhIm_DprPkJvaT0NSezvtPX09Rz2Jnqrb_69FzMq-m-0evWfCgkE4tSMYOcWpW8WcHZIJZeMs1rNUZqYHjqh2NPlSw"/>
+<span class="text-[10px] text-gray-500 mt-1">Cotton</span>
+</div>
+<!-- Chillies -->
+<div class="grid-item-card">
+<img alt="Chillies" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbjF8eHpqitb5uBYuaLYAXiJ_TTTx_v9IgL0nbrUukJfcPOtb-OR5vxc6b3FtorB5KI-pDbW1oR8ak47gPNE8fS7KF3gwGS74zauRUfE8b5fBxfHqIruXvYmaoxjVgX6JvqI6b0IYyTh97ya0cbEX8jGF_tiWW0dFb4ED721x-m-QEWGN-UGSebhwmgWfPmZu0tBcFBL3o5R8il06roYbK2aDxDEG9Kw6tQsHM3m3HSgbU6MPytjvqJ5IXWakGuGBGNRzN-1UMPbU"/>
+<span class="text-[10px] text-gray-500 mt-1">Chillies</span>
+</div>
+<!-- Tobacco -->
+<div class="grid-item-card">
+<img alt="Tobacco" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRHekl8U9aO1Qm6mG5WMTkkqFYqqS-pbySGPkYPoYB-zNW9TKPB86VbPikaxF27NKYiJsJ5hjuPxjTPys1Tf6_YL73nDfyfKl5yMd2Rf6iBoz1peNxxRA4Avtw7dGJt07TyCK9Y2fHagaeJZJ2P00JDWNr7g1v2FiRI-iQQBgPeq3K7ym34xqlKTu6kc08e-wE7tDkT5dXPP3cD-ln5UqHUko0wX-xVrsF4TFptlO50k19_OFeg_GEnH7pVrxgoMdvKBQqKVN4cmQ"/>
+<span class="text-[10px] text-gray-500 mt-1 text-center">Tobacco</span>
+</div>
+<!-- Black grams -->
+<div class="grid-item-card">
+<img alt="Black grams" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFHtsR3qwS3BWAImQXZgrZjWxwDCtaulMYg0ujve8z111iD00nH5sTfcGQvHIDdBlVv9HUcBD9S_LJ_Vm1USIHAfcpXrQ6o4mQJLh--VJ4eYh7DY0hjBU29x1fYXu0Zo_4Bf_cgVREM1rj0M2UeoEACffkddWj10mD_561vpqv9NVXUD4T_xCOk-y8MhL1s_DHTJ6WcL2KruPI2hqom4RlVqOMQcU7OCqoMYdpd1nuvPg_XERylDgL5oaDdgymA8bwSpUyR4fCLWs"/>
+<span class="text-[10px] text-gray-500 mt-1 text-center">Black grams</span>
+</div>
+<!-- Red grams -->
+<div class="grid-item-card">
+<img alt="Red grams" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsoDfRoz2KKqXIacarMzHLgJyjoOM7qadReP-m7J2ZuuuVICzilrG3WmrBVxA3F9DuHuX644ZRiLbAt6Srq0PP_ZCSRvLL7pdXA-FrUIMM4bym0s2SY1_FmXGL5sv3h8d17i5iP39qGbEZ-MCjZmGySf8kcOQr_pdbYfsoFoD5iCuMZGfiOjPyVIHp8ZMU8EeesNqd7jwoXQVMkI5RHldwrBwqNw0WXN-igByklDCuuHNteNHceOn-5yQnOcgGURX5qRZzrSq2Rco"/>
+<span class="text-[10px] text-gray-500 mt-1 text-center">Red grams</span>
+</div>
+<!-- Green grams -->
+<div class="grid-item-card">
+<img alt="Green grams" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcRMObJdZC7SoFLoEiXB6bj4JezIt26Jem8lpVyGJnXVvjLWuzf7GhaKuDZuIJnYW7lNZt5No9keNiN8e3V5nfhP4lJcQ4dqGcSPFEmVnz2jrpl05JseBNg3NO5CceGkT00V9-8CwwKZNDNmrLFp0gEXJk46nUoGhJE8DkogNBf2kipLWDPBoulvnVJMeZPb1Sf1h_9qKg1MkFqFXn6lhJbxgcXaJY1v9i7IR8eBiB7BQ45r3nNzM_tC-37acblTRhnqNiMCIyF30"/>
+<span class="text-[10px] text-gray-500 mt-1 text-center">Green grams</span>
+</div>
+<!-- Chick pea -->
+<div class="grid-item-card">
+<img alt="Chick pea" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT-lMySAu5lhl0I8nIPDxerEZzlCYNaSt8qr6wixv_CWMDxoo5TctEGT4J7nAGhcq9srTlklcVk7K_4U8abaXb4OZd6aEOOiXR1pY421Ub3ZBEYVXQIvyJyoMfF7h67dMWPKUKZSlWgzXS_VsAHVFSTIrTvqDwkBQP5BdJAwWza4PizkA5LGXrwtTX_iWB1IrBQGgWELsRTdEmDFui5Q180T-pIQSrSKCGWlqH221RAgvuBhCBaZUNtvuXv_rkNDWP_cBiq_7EKCs"/>
+<span class="text-[10px] text-gray-500 mt-1 text-center">Chick pea</span>
+</div>
+<!-- Tender coconut -->
+<div class="grid-item-card">
+<img alt="Tender coconut" class="w-10 h-10 object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuK871ZFw_i1FzK0hBX9v-ZgitKbmx1NE2sSkQoIGXSME2MRs6SFZ4m9_ZRoMeWW1rJEz7v47Yl7Ai-wQ7YORO6qxANcc-OSXNmkFOQa7dvzgeOw_rWqrpZvc9g6gZ11kcF50mkbstSi7m1BzBdl_qy1doNSQ7c0R_--6OUdusnbGvj7_Z0TBP7BYSoTfThRbfBsOktIfgV8MkBt9YOlucIUpSaUBsuZeQQf9U7IZTy2-KDvDx8V6xKa9f2EjUjQPn3_WM4PEGff4"/>
+<span class="text-[10px] text-gray-500 mt-1 text-center leading-tight">Tender coconut</span>
+</div>
+</div>
+</section>
+<!-- END: Screen 3 -->
+</body></html>

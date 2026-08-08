@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriDirect Market Watch</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#002204",
+                        "tertiary": "#775447",
+                        "background": "#f6fbf0",
+                        "surface-container-low": "#f0f5ea",
+                        "primary-container": "#268630",
+                        "surface-container-high": "#e5eadf",
+                        "primary": "#006b1b",
+                        "error-container": "#ffdad6",
+                        "inverse-on-surface": "#edf3e7",
+                        "on-secondary-fixed-variant": "#604100",
+                        "inverse-primary": "#7ddc7a",
+                        "primary-fixed": "#98f994",
+                        "surface": "#f6fbf0",
+                        "on-primary-fixed-variant": "#005313",
+                        "on-tertiary-fixed-variant": "#603f33",
+                        "surface-container": "#eaf0e4",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f6fbf0",
+                        "outline": "#6f7a6b",
+                        "on-secondary-container": "#6a4800",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#006e1c",
+                        "tertiary-fixed": "#ffdbcf",
+                        "surface-dim": "#d6dcd1",
+                        "tertiary-container": "#926c5e",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#f7fff1",
+                        "on-background": "#181d16",
+                        "secondary-fixed": "#ffdeac",
+                        "on-surface": "#181d16",
+                        "inverse-surface": "#2c322a",
+                        "surface-container-highest": "#dfe4d9",
+                        "secondary-container": "#feb300",
+                        "surface-variant": "#dfe4d9",
+                        "on-tertiary": "#ffffff",
+                        "outline-variant": "#bfcab9",
+                        "on-tertiary-fixed": "#2e150b",
+                        "on-surface-variant": "#3f4a3d",
+                        "on-secondary-fixed": "#281900",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ebbcac",
+                        "secondary-fixed-dim": "#ffba38",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#7e5700",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-fixed-dim": "#7ddc7a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="docked w-full top-0 sticky z-50 bg-[#f6fbf0] dark:bg-stone-950 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006b1b] dark:text-[#43A047]" data-icon="agriculture">agriculture</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold text-lg tracking-tight text-[#006b1b] dark:text-[#43A047] font-extrabold text-xl tracking-tighter">AgriDirect</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#181d16] dark:text-stone-400 hover:opacity-80 transition-opacity active:scale-95 duration-150" data-icon="search">search</span>
+</div>
+</header>
+<main class="pb-32 px-6">
+<!-- Hero Section: Market Insight -->
+<section class="mt-4 mb-8">
+<div class="bg-gradient-to-br from-primary to-primary-container rounded-[2rem] p-8 relative overflow-hidden text-on-primary-container shadow-2xl">
+<div class="relative z-10">
+<p class="font-label text-[10px] font-medium tracking-[0.2em] uppercase opacity-90 mb-2">Market Pulse</p>
+<h2 class="font-headline text-3xl font-extrabold leading-tight tracking-tight mb-4">Grain Prices are <br/>Climbing</h2>
+<div class="flex items-center gap-2 bg-surface-container-lowest/20 backdrop-blur-md w-fit px-4 py-2 rounded-full border border-white/10">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="text-sm font-semibold tracking-wide">Wheat index +4.2%</span>
+</div>
+</div>
+<!-- Abstract organic shape for background -->
+<div class="absolute -right-12 -top-12 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute right-4 bottom-4 opacity-30">
+<span class="material-symbols-outlined text-[120px]" data-icon="potted_plant">potted_plant</span>
+</div>
+</div>
+</section>
+<!-- Search & Filter Chips -->
+<section class="mb-8 overflow-x-auto no-scrollbar flex items-center gap-3">
+<div class="flex-shrink-0 bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold">All Crops</div>
+<div class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium">Grains</div>
+<div class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium">Fibers</div>
+<div class="flex-shrink-0 bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium">Oilseeds</div>
+</section>
+<!-- Market Watch List: Asymmetric Editorial Layout -->
+<section class="space-y-6">
+<div class="flex justify-between items-end mb-4">
+<h3 class="font-headline text-xl font-bold text-on-surface">Live Pricing</h3>
+<p class="font-label text-xs font-medium text-outline flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-secondary rounded-full animate-pulse"></span>
+                    Updated 2m ago
+                </p>
+</div>
+<!-- Card 1: Paddy (Large Primary Card) -->
+<div class="bg-surface-container-lowest rounded-[2rem] p-6 flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<div class="flex gap-4">
+<div class="w-14 h-14 bg-surface-container-highest rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="paddy">padding</span>
+</div>
+<div>
+<h4 class="font-headline text-lg font-bold">Paddy (Basmati)</h4>
+<p class="text-sm text-outline">Central Region Warehouse</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline text-2xl font-extrabold text-primary">₹3,420</p>
+<p class="text-xs font-label font-bold text-secondary tracking-wider uppercase">per quintal</p>
+</div>
+</div>
+<!-- Simple Trend Line Placeholder (SVG) -->
+<div class="w-full h-16 opacity-80">
+<svg class="w-full h-full stroke-primary fill-none stroke-[3] rounded-xl overflow-hidden" viewbox="0 0 400 100">
+<path d="M0,80 Q50,90 100,50 T200,30 T300,60 T400,20"></path>
+<path class="fill-primary/5 stroke-none" d="M0,80 Q50,90 100,50 T200,30 T300,60 T400,20 V100 H0 Z"></path>
+</svg>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-xl p-3">
+<p class="text-[10px] font-label font-bold text-outline uppercase tracking-widest mb-1">Low (24h)</p>
+<p class="font-headline text-sm font-bold">₹3,380</p>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3">
+<p class="text-[10px] font-label font-bold text-outline uppercase tracking-widest mb-1">High (24h)</p>
+<p class="font-headline text-sm font-bold">₹3,450</p>
+</div>
+</div>
+</div>
+<!-- Bento Grid Section -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 2: Wheat -->
+<div class="bg-surface-container rounded-[2rem] p-6 flex flex-col justify-between aspect-square">
+<div>
+<span class="material-symbols-outlined text-secondary text-2xl mb-4" data-icon="grass">grass</span>
+<h4 class="font-headline text-md font-bold">Wheat</h4>
+<p class="text-xs text-outline">Market Ave.</p>
+</div>
+<div>
+<p class="font-headline text-xl font-bold text-on-surface">₹2,125</p>
+<p class="text-[10px] font-bold text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="arrow_upward">arrow_upward</span> 1.2%
+                        </p>
+</div>
+</div>
+<!-- Card 3: Cotton -->
+<div class="bg-surface-container-highest rounded-[2rem] p-6 flex flex-col justify-between aspect-square">
+<div>
+<span class="material-symbols-outlined text-tertiary text-2xl mb-4" data-icon="cloud">cloud</span>
+<h4 class="font-headline text-md font-bold">Cotton</h4>
+<p class="text-xs text-outline">Shankar-6</p>
+</div>
+<div>
+<p class="font-headline text-xl font-bold text-on-surface">₹7,150</p>
+<p class="text-[10px] font-bold text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs" data-icon="arrow_downward">arrow_downward</span> 0.5%
+                        </p>
+</div>
+</div>
+</div>
+<!-- News/Insights Snippet -->
+<div class="relative rounded-[2rem] overflow-hidden group">
+<img class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" data-alt="top-down macro shot of fresh green sprouts emerging from dark moist soil in artistic cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtfbZeKTkOgi-6LJAtYy0YlhAd-BLi54UAWBkllDAwCJYTUkxqnKo4MxhYXEVynT_z_1liDPEShr-Xd6XHSktWO4D3-XNPRphNAbUdI0GSLiM1-61vqqn1DmtdZuPXdaKZ0DJc712ZJYGSOL1V7rIToyFbOwRo5z8mrcWoYFAlazli2cNkgoEAN9hTi43YEH12FalznFpP4OqcD_B42umcT4TP6MQa47BNQUr7t7SiFs6uy8ZfgDgGtuf46kW86m2a2J-MOFYfhLk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+<p class="text-[10px] font-label font-extrabold text-secondary-fixed tracking-widest uppercase mb-1">Supply Outlook</p>
+<h4 class="text-white font-headline text-lg font-bold leading-snug">Monsoon forecast may stabilize pulses pricing.</h4>
+</div>
+</div>
+<!-- Card 4: Mustard -->
+<div class="bg-surface-container-low rounded-[2rem] p-6 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary-container" data-icon="water_drop" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<h4 class="font-headline text-md font-bold">Mustard Oil</h4>
+<p class="text-[10px] font-label font-bold text-outline uppercase tracking-widest">Bullish</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline text-lg font-bold">₹145/kg</p>
+<svg class="w-16 h-4 stroke-primary fill-none ml-auto" viewbox="0 0 100 20">
+<path d="M0,15 L20,10 L40,12 L60,5 L80,8 L100,2"></path>
+</svg>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6fbf0]/80 dark:bg-stone-900/80 backdrop-blur-xl rounded-t-[2rem] shadow-[0_-4px_24px_rgba(24,29,22,0.06)] border-t border-[#bfcab9]/20">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<!-- Ads/Market (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#eaf0e4] dark:bg-[#006b1b]/20 text-[#006b1b] dark:text-[#43A047] rounded-2xl px-5 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant" style="font-variation-settings: 'FILL' 1;">potted_plant</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Ads</span>
+</a>
+<!-- Inbox -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Inbox</span>
+</a>
+<!-- Alerts -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Alerts</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

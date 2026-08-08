@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AgriDirect Inbox</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed": "#002204",
+                    "tertiary": "#775447",
+                    "background": "#f6fbf0",
+                    "surface-container-low": "#f0f5ea",
+                    "primary-container": "#268630",
+                    "surface-container-high": "#e5eadf",
+                    "primary": "#006b1b",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#edf3e7",
+                    "on-secondary-fixed-variant": "#604100",
+                    "inverse-primary": "#7ddc7a",
+                    "primary-fixed": "#98f994",
+                    "surface": "#f6fbf0",
+                    "on-primary-fixed-variant": "#005313",
+                    "on-tertiary-fixed-variant": "#603f33",
+                    "surface-container": "#eaf0e4",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f6fbf0",
+                    "outline": "#6f7a6b",
+                    "on-secondary-container": "#6a4800",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#006e1c",
+                    "tertiary-fixed": "#ffdbcf",
+                    "surface-dim": "#d6dcd1",
+                    "tertiary-container": "#926c5e",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#f7fff1",
+                    "on-background": "#181d16",
+                    "secondary-fixed": "#ffdeac",
+                    "on-surface": "#181d16",
+                    "inverse-surface": "#2c322a",
+                    "surface-container-highest": "#dfe4d9",
+                    "secondary-container": "#feb300",
+                    "surface-variant": "#dfe4d9",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#bfcab9",
+                    "on-tertiary-fixed": "#2e150b",
+                    "on-surface-variant": "#3f4a3d",
+                    "on-secondary-fixed": "#281900",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ebbcac",
+                    "secondary-fixed-dim": "#ffba38",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#7e5700",
+                    "on-tertiary-container": "#fffbff",
+                    "primary-fixed-dim": "#7ddc7a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fbf0;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="docked w-full top-0 sticky z-50 bg-[#f6fbf0] dark:bg-stone-950 flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#006b1b] dark:text-[#43A047]" data-icon="agriculture">agriculture</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold text-xl tracking-tighter text-[#006b1b] dark:text-[#43A047]">AgriDirect</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#181d16] dark:text-stone-400" data-icon="search">search</span>
+</button>
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[#181d16] dark:text-stone-400" data-icon="filter_list">filter_list</span>
+</button>
+</div>
+</header>
+<main class="px-6 py-4">
+<!-- Inbox Title & Categories -->
+<div class="mb-8">
+<h2 class="text-3xl font-bold font-headline tracking-tight text-on-surface mb-6">Inbox</h2>
+<div class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold whitespace-nowrap">All Messages</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap">Buyers</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap">Suppliers</button>
+<button class="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full text-sm font-medium whitespace-nowrap">Support</button>
+</div>
+</div>
+<!-- Chat List - Organic Layering -->
+<div class="space-y-3">
+<!-- Chat Item: Unread -->
+<div class="relative group">
+<div class="absolute -inset-0.5 bg-gradient-to-r from-primary/20 to-secondary/10 rounded-[2rem] blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+<div class="relative bg-surface-container-lowest p-4 rounded-xl flex items-center gap-4 transition-all duration-200 active:scale-[0.98]">
+<div class="relative flex-shrink-0">
+<img alt="Organic Farmer" class="w-14 h-14 rounded-xl object-cover" data-alt="Close-up portrait of a weathered organic farmer smiling in a sunlit vegetable field, warm natural lighting, professional photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb0t1YUMWX3LqCCKwEHZhxjojfX4OypbfkXYm05oz_7e8P5-NgikhooKojHroHdDMNU1GQ-uHBbgxUGvSMfYiuE49znG3MkwQIzb-8hj1kG4W-6ws6AikCbrNdryBj5M47k0kaxxz_tmhKC1_wg3WXuWRKmO_2NIs6MM5vHDlf8ideYcFHFpzG2fxLgIkfAR0bGN-i_wtQrvZ3rn3Dw212ihw0wHrPndQkeHNozdv0A2gGApm5YV-EjXu8_rgEoS-QBoYpQ0owRkM"/>
+<div class="absolute -top-1 -right-1 w-4 h-4 bg-primary border-2 border-surface-container-lowest rounded-full"></div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-on-surface truncate">Green Valley Co-op</h3>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest font-label">2m ago</span>
+</div>
+<p class="text-sm font-semibold text-on-surface truncate">We can offer 500kg of organic basmati at the requested rate...</p>
+<div class="flex items-center gap-2 mt-2">
+<span class="text-[10px] bg-surface-container-high px-2 py-0.5 rounded text-on-surface-variant font-medium tracking-tight">Rice Order #882</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Item: Read -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 active:bg-surface-container transition-colors">
+<div class="flex-shrink-0">
+<img alt="Buyer profile" class="w-14 h-14 rounded-xl object-cover grayscale-[30%]" data-alt="Headshot of a modern retail buyer in a professional studio setting, soft neutral background, high-end editorial look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARsmm8WAoZR8BGFXm8g2ihPeg-4IsJnPkdo6mugAyEH9xqvGUN4Y1OUD2osnPGYYMBTGshqP5hc8jclNGobHcL47SiryOGdgD4MicxGRhSLkdEAU0lbUX9ks15mcJyjH4hVIzSt02GA3A2XX_kavFKOVX-L5YTKtyQZPBTr9P1QXQwyGGJfbNqwv3W6yPZDVLzOBOsFnj8jXxpT2uVMFNx8BB6sy3P-HjDNATNEEP_jaIHq1Mq-YhKWXOKNbGcFl7462Fum-UKm9s"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-on-surface truncate">Rohan Mehta</h3>
+<span class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest font-label">1h ago</span>
+</div>
+<p class="text-sm text-on-surface-variant/80 truncate">The quality of the last batch of cotton was excellent. Let's discuss...</p>
+</div>
+</div>
+<!-- Chat Item: Read -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 active:bg-surface-container transition-colors">
+<div class="flex-shrink-0">
+<img alt="Harvest Logistics" class="w-14 h-14 rounded-xl object-cover grayscale-[30%]" data-alt="Macro photo of fresh green coffee beans in a wooden crate, soft morning light filtering through farm window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrPiA9PPidjf7cUv0mlmNvk6Q1d7hqL5DdYuY3CFhjl9qPWojsYT9I2rzTxEajWf3Qd6Tbi0mS5mvc3Ba-dPvwh7r_FD0s7D_cD5dx-26ZhpPlsx4ajPyWhl-ZNb59A8RU48akhPSHb-C4sxujesIDqvfzZhQKOhzakAQiKNGETbIdL4GTRStjE89ZQ1TPl2qaorE_Qv_L2r350GkA9X5qq3V5TTPrp3q49s7G92iciFnixNlEiwHcuXqx6OYrfJi3d68lbdVJ87Y"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-on-surface truncate">Harvest Logistics</h3>
+<span class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest font-label">Yesterday</span>
+</div>
+<p class="text-sm text-on-surface-variant/80 truncate">Truck #KA05-2234 has been dispatched for your farm pickup.</p>
+</div>
+</div>
+<!-- Chat Item: Read with Image -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 active:bg-surface-container transition-colors">
+<div class="flex-shrink-0">
+<div class="w-14 h-14 rounded-xl bg-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="support_agent">support_agent</span>
+</div>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-on-surface truncate">AgriDirect Support</h3>
+<span class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest font-label">2 days</span>
+</div>
+<p class="text-sm text-on-surface-variant/80 truncate flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="image">image</span> Photo sent
+                    </p>
+</div>
+</div>
+<!-- Chat Item: Read -->
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center gap-4 active:bg-surface-container transition-colors">
+<div class="flex-shrink-0">
+<img alt="Seed Supplier" class="w-14 h-14 rounded-xl object-cover grayscale-[30%]" data-alt="Young agricultural scientist examining sprouts in a high-tech greenhouse, clean white lab coat, professional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKqlG2tDcly4EjZ-n85BJcAyJf-DDSZKr1ahy7RZPHH22X-4JFTVwFiFLC1ahkUCbQTlK_bxo2PIyRpcBPiG5djMc2DZT7XX41igXwY9sLdyayYGBclq1ot3cuLQhm8ma_VSoydlH5N44xrJJcSm_2cNhl8crQzWaK5twDnze8dbfRI_GpnZcmcDIWe7ndHAZ3xTfpZ6rMzDuWgvn_sgtiX03rsenrBiOPbLCLcim7U5Dghy0IRFaGWsIoQz2I9A4H31EMIPtgJa4"/>
+</div>
+<div class="flex-grow min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-on-surface truncate">Pioneer Seeds Ltd.</h3>
+<span class="text-[10px] text-on-surface-variant/60 uppercase tracking-widest font-label">3 days</span>
+</div>
+<p class="text-sm text-on-surface-variant/80 truncate">The monsoon variety seeds are back in stock. Order now.</p>
+</div>
+</div>
+</div>
+<!-- Floating Action Button for New Chat -->
+<button class="fixed bottom-28 right-6 w-14 h-14 bg-primary text-on-primary rounded-2xl shadow-[0_8px_24px_rgba(0,107,27,0.25)] flex items-center justify-center active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="edit_square">edit_square</span>
+</button>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#f6fbf0]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-4px_24px_rgba(24,29,22,0.06)] rounded-t-[2rem]">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<!-- Ads -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="potted_plant">potted_plant</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Ads</span>
+</a>
+<!-- Inbox (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#eaf0e4] dark:bg-[#006b1b]/20 text-[#006b1b] dark:text-[#43A047] rounded-2xl px-5 py-1.5 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="mail" style="font-variation-settings: 'FILL' 1;">mail</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Inbox</span>
+</a>
+<!-- Alerts -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Alerts</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-[#181d16]/60 dark:text-stone-400 px-5 py-1.5 hover:bg-[#f0f5ea] dark:hover:bg-stone-800 rounded-2xl transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
